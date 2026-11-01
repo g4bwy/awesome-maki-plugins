@@ -52,6 +52,7 @@ Plugins that switch providers, or connect Maki to a subscription instead of a pa
 - [maki-claude-oauth](https://github.com/arxdeus/maki-claude-oauth) - A dynamic provider that reuses the OAuth session from your main Claude Code install. No separate Anthropic API key and no second browser login.
 - [maki-antigravity](https://github.com/bzzimmy/maki-antigravity) - Lets Maki use a Google AI Pro / Antigravity subscription. The author uses it mainly for a cheap, fast research subagent.
 - [provider](https://github.com/laudney/maki-essential-plugins/blob/main/plugin/provider.lua) - A provider and model picker. Log in to each provider once, then switch without logging out or re-entering API keys. `/provider`, `/provider zai`, or `/provider anthropic/claude-sonnet-4-6`. A change during an active run takes effect on the next run. Ships in [maki-essential-plugins](https://github.com/laudney/maki-essential-plugins).
+- [maki-openai-oauth](https://github.com/arxdeus/maki-openai-oauth) - A Maki dynamic provider that authenticates with OpenAI through the ChatGPT/Codex OAuth flow.
 
 > These subscription bridges may break the terms of service of the provider. Read the provider terms before you rely on one.
 
