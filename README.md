@@ -4,7 +4,7 @@
 
 A curated list of community Lua plugins for [Maki](https://github.com/tontinton/maki), an AI coding agent that you can extend without touching its Rust core.
 
-Every plugin here was shared by its author in the [Plugin showcase discussion #452](https://github.com/tontinton/maki/discussions/452). Most are a single `init.lua` file plus a `plugin.toml`. You can install a whole git bundle with `maki.pack.add`, or copy one file into `~/.config/maki/lua/`. See the [plugin docs](https://maki.sh/docs/plugins/) and the [package docs](https://maki.sh/docs/packages/) for details.
+Most plugins here were shared by their author in the [Plugin showcase discussion #452](https://github.com/tontinton/maki/discussions/452). The rest come from the plugin collections those authors published. A typical plugin is a single `init.lua` file plus a `plugin.toml`. You can install a whole git bundle with `maki.pack.add`, or copy one file into `~/.config/maki/lua/`. See the [plugin docs](https://maki.sh/docs/plugins/) and the [package docs](https://maki.sh/docs/packages/) for details.
 
 ## Contents
 
@@ -27,6 +27,7 @@ Tools that help you navigate, remember, and move around large sessions.
 - [notes](https://github.com/sdroege/maki-plugins/tree/main/notes) - Adds a `notes` tool and a `/notes` picker. The model saves session state that must survive compaction, and the plugin nudges it to write notes at 40, 60, and 80 percent of the context window. Ships in [maki-plugins](https://github.com/sdroege/maki-plugins), needs a few unmerged core changes.
 - [history](https://github.com/sdroege/maki-plugins/tree/main/history) - Adds a `history` tool. The model reads its own session transcript: the current window, archived pre-compaction windows, and subagent transcripts, without touching session files on disk. Ships in [maki-plugins](https://github.com/sdroege/maki-plugins), needs a few unmerged core changes.
 - [replay](https://github.com/g4bwy/maki-plugins/tree/master/replay) - Exports session logs to a format that [claude-replay](https://github.com/es617/claude-replay) can play back.
+- [time](https://github.com/g4bwy/maki-plugins/tree/master/time) - Opens a `/time` popup that splits a session into idle, inference, and tool-call time, with percent shares per line. It reads stamps from the transcript, so nothing persists and the numbers survive reload and compaction. Needs a Maki built with per-message timestamps, via the `core.patch` in the same folder. Ships in [maki-plugins](https://github.com/g4bwy/maki-plugins).
 
 ## Agent behavior and autonomy
 
@@ -90,7 +91,7 @@ Starting points for writing your own plugin.
 - When one repository ships several plugins, each plugin gets its own entry, and the entry names the repository.
 - Plugins are community work. Review the code before you grant it permissions.
 - A single-file plugin that shows an author name is the author's own gist or repo.
-- Descriptions come from what the author posted in [discussion #452](https://github.com/tontinton/maki/discussions/452).
+- Descriptions come from the author's post in [discussion #452](https://github.com/tontinton/maki/discussions/452), or from the plugin's own README when the plugin arrived later.
 
 ## Contributing
 
