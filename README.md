@@ -33,6 +33,7 @@ Tools that help you navigate, remember, and move around large sessions.
 
 Plugins that keep the agent working toward an objective or coordinate several agents.
 
+- [maki-loop](https://github.com/MatthewScholefield/maki-loop) - Adds `/loop` and `/loop-forever` to repeat a prompt in fresh sessions. Its `plugin.toml` requests file, agent, and session permissions; there is no iteration or spending cap.
 - [goal](https://github.com/laudney/maki-essential-plugins/blob/main/plugin/goal.lua) - Keeps an objective alive across turns. When a turn ends while the goal is active, the agent is asked to continue, and it can mark the goal complete or blocked with a summary. `/goal pause|resume|clear`, saved per session. Ships in [maki-essential-plugins](https://github.com/laudney/maki-essential-plugins), tested on upstream Maki 0.6.0 and main.
 - [monitor](https://github.com/laudney/maki-essential-plugins/blob/main/plugin/monitor.lua) - Watches a long-running command in the background. A matching line or the command's exit can wake the agent, or wait in the session mailbox until the next turn. `/monitors` lists and stops them. Ships in [maki-essential-plugins](https://github.com/laudney/maki-essential-plugins).
 - [maki-peer](https://github.com/lu-zero/maki-peer) - Lets several agent instances run together and exchange messages. Supports Maki, OpenCode, Grok, and Vibe peers.
